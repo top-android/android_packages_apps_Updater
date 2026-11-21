@@ -28,7 +28,6 @@ import com.android.settingslib.spa.framework.theme.SettingsShape.CornerExtraSmal
 import com.android.settingslib.spa.framework.theme.SettingsSpace.small1
 import com.android.settingslib.spa.framework.theme.SettingsTheme
 import org.lineageos.updater.R
-import org.lineageos.updater.deviceinfo.DeviceInfoUtils
 
 @Composable
 fun DeviceInfoActionButtons(modifier: Modifier = Modifier) {
@@ -52,7 +51,7 @@ fun DeviceInfoActionButtons(modifier: Modifier = Modifier) {
         )
         TextButton(
             onClick = {
-                val url = context.getString(R.string.menu_changelog_url, DeviceInfoUtils.device)
+                val url = context.getString(R.string.menu_changelog_url)
                 val intent = Intent(Intent.ACTION_VIEW, url.toUri())
                 context.startActivity(intent)
             },
